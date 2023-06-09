@@ -1,3 +1,6 @@
+using System;
+
+[Serializable]
 public class BlockDirt : Block
 {
     public BlockDirt() : base()
