@@ -8,6 +8,8 @@ public class Block
     public enum Direction { north, east, south, west, up, down };
     public struct Tile { public int x; public int y; }
 
+    public Texture2D TextureAtlas { get; set; }
+
     const float tileSize = 0.25f;
 
     public bool changed = true;
@@ -170,5 +172,10 @@ public class Block
         UVs[3] = new Vector2(tileSize * tilePos.x,
             tileSize * tilePos.y);
         return UVs;
+    }
+
+    public Texture2D GetTexture()
+    {
+        return TextureAtlas;
     }
 }
